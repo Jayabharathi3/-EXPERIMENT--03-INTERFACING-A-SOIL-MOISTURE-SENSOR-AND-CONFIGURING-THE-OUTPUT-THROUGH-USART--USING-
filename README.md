@@ -71,11 +71,12 @@ configure in the usart 2 as asynchronous mode and set the baud rate as 115200 as
 
 ## STM 32 CUBE PROGRAM :
 
-```
+```C
 #include "main.h"
 #include "stdio.h"
 #include "stdbool.h"
 #include "Soil Moisture Sensor.h"
+
 long int adc_val;
 ADC_HandleTypeDef hadc;
 UART_HandleTypeDef huart2;
@@ -83,11 +84,13 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_ADC_Init(void);
 static void MX_USART2_UART_Init(void);
+
 #if defined(__ICCARM__) || defined (__ARMCC__VERSION)
 #define PUTCHAR_PROTOYPE int fputc(int ch,FILE *f)
 #elif defined(__GNUC__)
 #define PUTCHAR_PROTOTYPE int __io__putchar(int ch)
 #endif
+
 PUTCHAR_PROTOTYPE
 {
 	HAL_UART_Transmit(&huart2, (uint8_t *)&ch, 1, 0xFFFF);
@@ -244,7 +247,8 @@ void assert_failed(uint8_t *file, uint32_t line)
 
 ![image](https://github.com/Jayabharathi3/-EXPERIMENT--03-INTERFACING-A-SOIL-MOISTURE-SENSOR-AND-CONFIGURING-THE-OUTPUT-THROUGH-USART--USING-/assets/120367796/bbc33677-c48a-484e-8c16-ad3407e250a3)
 
-![image](https://github.com/Jayabharathi3/-EXPERIMENT--03-INTERFACING-A-SOIL-MOISTURE-SENSOR-AND-CONFIGURING-THE-OUTPUT-THROUGH-USART--USING-/assets/120367796/5d074744-cfc4-4743-b3cc-8799d567a2f8)
+![image](https://github.com/Jayabharathi3/-EXPERIMENT--03-INTERFACING-A-SOIL-MOISTURE-SENSOR-AND-CONFIGURING-THE-OUTPUT-THROUGH-USART--USING-/assets/120367796/e0e12d78-3b37-48ef-939e-3e9cd1d2b457)
+
 
 ![image](https://github.com/Jayabharathi3/-EXPERIMENT--03-INTERFACING-A-SOIL-MOISTURE-SENSOR-AND-CONFIGURING-THE-OUTPUT-THROUGH-USART--USING-/assets/120367796/9b99c8ec-2ab8-4a24-92d1-aff96bfaeb6d)
 
